@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Cantinho do Desenho</title>
+  <meta name="description" content="Cantinho do Desenho: comissões artísticas da Hellena. Tabela de preços, como pedir e termos de serviço.">
+  <meta name="theme-color" content="#d4e6f8">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 7 6' shape-rendering='crispEdges'%3E%3Cg fill='%23ef8fa8'%3E%3Crect x='1' width='2' height='1'/%3E%3Crect x='4' width='2' height='1'/%3E%3Crect y='1' width='7' height='2'/%3E%3Crect x='1' y='3' width='5' height='1'/%3E%3Crect x='2' y='4' width='3' height='1'/%3E%3Crect x='3' y='5' width='1' height='1'/%3E%3C/g%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Pixelify+Sans:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- desenhos reutilizados na página -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="fig" viewBox="0 0 100 140">
+        <path d="M33 22c0-12 8-19 17-19s17 7 17 19c0 3-1 5-2 7-5-2-9-6-11-11-3 6-9 10-17 11-3-1-4-3-4-7z" fill="currentColor"/>
+        <circle cx="50" cy="26" r="12" fill="currentColor"/>
+        <rect x="45" y="36" width="10" height="7" fill="currentColor"/>
+        <path d="M28 46c0-4 4-6 9-6h26c5 0 9 2 9 6v38c0 3-2 5-5 5H33c-3 0-5-2-5-5z" fill="currentColor"/>
+        <rect x="32" y="88" width="15" height="46" rx="5" fill="currentColor"/>
+        <rect x="53" y="88" width="15" height="46" rx="5" fill="currentColor"/>
+      </symbol>
+      <clipPath id="clip-full"><rect x="3" y="2" width="94" height="136"/></clipPath>
+      <clipPath id="clip-half"><rect x="3" y="2" width="94" height="78"/></clipPath>
+      <clipPath id="clip-icon"><rect x="19" y="2" width="62" height="62"/></clipPath>
+      <symbol id="px-heart" viewBox="0 0 7 6">
+        <g fill="currentColor">
+          <rect x="1" y="0" width="2" height="1"/><rect x="4" y="0" width="2" height="1"/>
+          <rect x="0" y="1" width="7" height="2"/>
+          <rect x="1" y="3" width="5" height="1"/>
+          <rect x="2" y="4" width="3" height="1"/>
+          <rect x="3" y="5" width="1" height="1"/>
+        </g>
+      </symbol>
+      <symbol id="px-spark" viewBox="0 0 7 7">
+        <g fill="currentColor">
+          <rect x="3" y="0" width="1" height="7"/><rect x="0" y="3" width="7" height="1"/>
+          <rect x="2" y="2" width="3" height="3"/>
+        </g>
+      </symbol>
+    </defs>
+  </svg>
+
+  <div class="lace" aria-hidden="true"></div>
+
+  <div class="site">
+    <div class="frame">
+      <svg class="bow" viewBox="0 0 120 90" aria-hidden="true">
+        <path d="M58 44C40 12 10 8 6 30c-3 18 18 34 52 14z" fill="#d9b27a" stroke="#8b6844" stroke-width="3" stroke-linejoin="round"/>
+        <path d="M62 44c18-32 48-36 52-14 3 18-18 34-52 14z" fill="#d9b27a" stroke="#8b6844" stroke-width="3" stroke-linejoin="round"/>
+        <path d="M52 50 36 84l14-6 6 10 8-34z" fill="#c79a5e" stroke="#8b6844" stroke-width="3" stroke-linejoin="round"/>
+        <path d="M68 50l16 34-14-6-6 10-8-34z" fill="#c79a5e" stroke="#8b6844" stroke-width="3" stroke-linejoin="round"/>
+        <rect x="48" y="34" width="24" height="22" rx="8" fill="#e9c996" stroke="#8b6844" stroke-width="3"/>
+      </svg>
+
+      <div class="frame-in">
+        <header class="banner">
+          <!-- Troque assets/avatar-hellena.png pela sua imagem de perfil, mantendo o mesmo nome do arquivo. -->
+          <div class="avatar">
+            <img src="assets/avatar-hellena.png" width="120" height="120" alt="Foto de perfil da Hellena, uma imagem azul brilhante">
+          </div>
+          <div class="banner-title">
+            <h1>Cantinho do Desenho</h1>
+            <p class="tagline">Comissões artísticas da Hellena</p>
+            <p class="chips">
+              <a class="chip" href="#contato" data-social="discord" aria-label="Discord: presasdecoelho">Discord: presasdecoelho</a>
+              <a class="chip" href="#contato" data-social="tiktok" aria-label="TikTok: @etforsure">TikTok: @etforsure</a>
+            </p>
+          </div>
+        </header>
+
+        <p class="ticker" id="ticker"><b>Olá!</b> Seja bem-vindo(a) ao Cantinho do Desenho.</p>
+
+        <div class="cols">
+          <!-- menu -->
+          <nav aria-label="Navegação principal">
+            <div class="box">
+              <h2 class="box-h">Navegação</h2>
+              <ul class="nav">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#precos">Preços</a></li>
+                <li><a href="#como-pedir">Como pedir</a></li>
+                <li><a href="#termos">Termos de Serviço</a></li>
+                <li><a href="#sobre">Sobre mim</a></li>
+                <li><a href="#contato">Contato</a></li>
+              </ul>
+            </div>
+          </nav>
+
+          <!-- posts -->
+          <main id="conteudo">
+            <article class="post" id="inicio" aria-labelledby="t-inicio">
+              <h2 id="t-inicio">bem-vindo(a) ao Cantinho do Desenho!</h2>
+              <p class="sub">▶ comissões artísticas da Hellena</p>
+              <p>Aqui você encontra meus preços, as regras das comissões e como fazer seu pedido. Dá uma olhada na tabela e, quando escolher, é só me chamar.</p>
+              <p>Antes de pedir, leia os <a href="#termos">Termos de Serviço</a>.</p>
+            </article>
+
+            <article class="post" id="precos" aria-labelledby="t-precos">
+              <h2 id="t-precos">tabela de preços <svg class="px px-heart" aria-hidden="true"><use href="#px-heart"/></svg></h2>
+              <p class="sub">▶ fullbody, halfbody e icon</p>
+              <p class="meta"><time datetime="2026-10-28">28/10/2026</time><span>categoria: preços</span></p>
+              <p>Três tipos de ilustração. A parte azul de cada desenho mostra o que entra no enquadramento.</p>
+
+              <ul class="prices">
+                <li class="price">
+                  <svg class="crop-art" viewBox="0 0 100 140" role="img" aria-label="Enquadramento do fullbody: corpo inteiro, da cabeça aos pés">
+                    <use href="#fig" class="ghost" width="100" height="140"/>
+                    <g clip-path="url(#clip-full)"><use href="#fig" class="solid" width="100" height="140"/></g>
+                    <rect class="crop" x="3" y="2" width="94" height="136"/>
+                  </svg>
+                  <h3>Fullbody</h3>
+                  <p class="amount"><small>R$</small>55</p>
+                  <p class="desc">Personagem de corpo inteiro.</p>
+                </li>
+                <li class="price">
+                  <svg class="crop-art" viewBox="0 0 100 140" role="img" aria-label="Enquadramento do halfbody: da cabeça até aproximadamente a cintura">
+                    <use href="#fig" class="ghost" width="100" height="140"/>
+                    <g clip-path="url(#clip-half)"><use href="#fig" class="solid" width="100" height="140"/></g>
+                    <rect class="crop" x="3" y="2" width="94" height="78"/>
+                  </svg>
+                  <h3>Halfbody</h3>
+                  <p class="amount"><small>R$</small>45</p>
+                  <p class="desc">Personagem da cabeça até aproximadamente a cintura.</p>
+                </li>
+                <li class="price">
+                  <svg class="crop-art" viewBox="0 0 100 140" role="img" aria-label="Enquadramento do icon: quadrado focado no rosto">
+                    <use href="#fig" class="ghost" width="100" height="140"/>
+                    <g clip-path="url(#clip-icon)"><use href="#fig" class="solid" width="100" height="140"/></g>
+                    <rect class="crop" x="19" y="2" width="62" height="62"/>
+                  </svg>
+                  <h3>Icon</h3>
+                  <p class="amount"><small>R$</small>25</p>
+                  <p class="desc">Ilustração focada no rosto, ideal para foto de perfil.</p>
+                </li>
+              </ul>
+
+              <div class="note">
+                <p>Estes são os <strong>preços-base</strong>. Personagens extras, fundos complexos e detalhes adicionais podem aumentar o valor. Se isso acontecer, eu aviso você antes de começar o trabalho.</p>
+              </div>
+
+              <section class="calc" aria-labelledby="calc-t">
+                <h3 id="calc-t">monte seu pedido</h3>
+                <p class="hint">Some os preços-base do que você quer. Extras são combinados à parte.</p>
+                <div class="row">
+                  <span class="n">Fullbody · R$ 55</span>
+                  <span class="step">
+                    <button type="button" data-k="full" data-d="-1" aria-label="Remover um fullbody" disabled>−</button>
+                    <output id="q-full" aria-label="Quantidade de fullbody">0</output>
+                    <button type="button" data-k="full" data-d="1" aria-label="Adicionar um fullbody">+</button>
+                  </span>
+                  <span class="sum" id="s-full">R$ 0</span>
+                </div>
+                <div class="row">
+                  <span class="n">Halfbody · R$ 45</span>
+                  <span class="step">
+                    <button type="button" data-k="half" data-d="-1" aria-label="Remover um halfbody" disabled>−</button>
+                    <output id="q-half" aria-label="Quantidade de halfbody">0</output>
+                    <button type="button" data-k="half" data-d="1" aria-label="Adicionar um halfbody">+</button>
+                  </span>
+                  <span class="sum" id="s-half">R$ 0</span>
+                </div>
+                <div class="row">
+                  <span class="n">Icon · R$ 25</span>
+                  <span class="step">
+                    <button type="button" data-k="icon" data-d="-1" aria-label="Remover um icon" disabled>−</button>
+                    <output id="q-icon" aria-label="Quantidade de icon">0</output>
+                    <button type="button" data-k="icon" data-d="1" aria-label="Adicionar um icon">+</button>
+                  </span>
+                  <span class="sum" id="s-icon">R$ 0</span>
+                </div>
+                <div class="total"><span>total (preço-base)</span><span id="total" role="status">R$ 0</span></div>
+              </section>
+
+              <p class="post-foot">tags: #comissões #preços #fullbody #halfbody #icon</p>
+            </article>
+
+            <article class="post" id="como-pedir" aria-labelledby="t-pedir">
+              <h2 id="t-pedir">como pedir <svg class="px px-heart" aria-hidden="true"><use href="#px-heart"/></svg></h2>
+              <p class="sub">▶ passo a passo</p>
+              <p class="meta"><time datetime="2026-10-28">28/10/2026</time><span>categoria: avisos</span></p>
+              <ol class="steps">
+                <li>Escolha o tipo de comissão: fullbody, halfbody ou icon.</li>
+                <li>Leia os <a href="#termos">Termos de Serviço</a>.</li>
+                <li>Envie uma descrição detalhada e imagens de referência.</li>
+                <li>Confirme comigo o preço final, o pagamento e o prazo.</li>
+                <li>Faça o pagamento conforme combinado.</li>
+                <li>Acompanhe e aprove o rascunho.</li>
+                <li>Receba a arte finalizada.</li>
+              </ol>
+              <p>Pronto para pedir? Me chame por um destes canais:</p>
+              <p class="actions">
+                <a class="btn" href="#contato" data-social="discord" aria-label="Contato pelo Discord: presasdecoelho">Discord: presasdecoelho</a>
+                <a class="btn" href="#contato" data-social="tiktok" aria-label="TikTok: @etforsure">TikTok: @etforsure</a>
+              </p>
+              <p class="post-foot">tags: #como-pedir #avisos</p>
+            </article>
+
+            <article class="post" id="termos" aria-labelledby="t-termos">
+              <h2 id="t-termos">termos de serviço <svg class="px px-heart" aria-hidden="true"><use href="#px-heart"/></svg></h2>
+              <p class="sub">▶ as regras das comissões</p>
+              <p class="meta"><time datetime="2026-10-28">28/10/2026</time><span>última atualização</span></p>
+              <p>Estas regras valem para todas as comissões do Cantinho do Desenho. Elas existem para deixar tudo claro para quem pede e para mim. Se algo não ficar claro, pergunte antes de pedir.</p>
+
+              <ul class="tos-index" aria-label="Tópicos dos termos">
+                <li><a href="#tos-pagamento">Pagamento</a></li>
+                <li><a href="#tos-reembolso">Cancelamentos e reembolsos</a></li>
+                <li><a href="#tos-revisoes">Revisões</a></li>
+                <li><a href="#tos-prazo">Prazo e entrega</a></li>
+                <li><a href="#tos-direitos">Direitos autorais</a></li>
+                <li><a href="#tos-referencias">Referências e limites</a></li>
+                <li><a href="#tos-portfolio">Portfólio e privacidade</a></li>
+                <li><a href="#tos-aceite">Aceitação</a></li>
+              </ul>
+
+              <section class="tos-item" id="tos-pagamento" aria-labelledby="h-pagamento">
+                <h3 id="h-pagamento"><svg class="px px-heart" aria-hidden="true"><use href="#px-heart"/></svg>Pagamento</h3>
+                <ul>
+                  <li>O pagamento e o método usado são combinados antes de eu começar o trabalho.</li>
+                  <li>Formas de pagamento aceitas: <span class="ph">preencher: formas de pagamento</span></li>
+                  <li>Eu começo a comissão depois de confirmar o pagamento, conforme o que combinamos.</li>
+                  <li>Valores adicionais (como personagens extras, fundos complexos ou detalhes a mais) são informados antes e só entram no pedido se você aprovar.</li>
+                </ul>
+              </section>
+
+              <!-- REVISAR: as regras de reembolso abaixo são um padrão equilibrado sugerido; ajuste ao seu jeito de trabalhar. -->
+              <section class="tos-item" id="tos-reembolso" aria-labelledby="h-reembolso">
+                <h3 id="h-reembolso"><svg class="px px-heart" aria-hidden="true"><use href="#px-heart"/></svg>Cancelamentos e reembolsos</h3>
+                <ul>
+                  <li>Antes de eu começar o trabalho, você pode cancelar e eu devolvo o valor pago.</li>
+                  <li>Depois que o trabalho começou, o reembolso é proporcional ao que ainda não foi feito. Eu explico como cheguei ao valor.</li>
+                  <li>Se eu não conseguir concluir a comissão, devolvo o valor correspondente à parte que não foi realizada. Se você preferir, podemos combinar outra solução.</li>
+                  <li>Depois da entrega final, cada pedido de reembolso é analisado conversando com você, sempre respeitando seus direitos previstos em lei.</li>
+                </ul>
+                <p class="law">Estas regras não retiram nenhum direito que você tenha pela legislação aplicável, como as normas de defesa do consumidor, quando elas valerem para o seu caso.</p>
+              </section>
+
+              <section class="tos-item" id="tos-revisoes" aria-labelledby="h-revisoes">
+                <h3 id="h-revisoes"><svg class="px px-heart" aria-hidden="true"><use href="#px-heart"/></svg>Revisões e alterações</h3>
+                <ul>
+                  <li>Na fase de rascunho, pequenos ajustes são bem-vindos, como cor, expressão ou posição de um detalhe.</li>
+                  <li>Limite de ajustes no rascunho: <span class="ph">preencher, se quiser limitar</span></li>
+                  <li>Depois que você aprova o rascunho, mudanças grandes podem ter custo adicional. Eu informo o valor antes de fazer.</li>
+                  <li>Erros meus, como um detalhe esquecido ou uma cor diferente da referência, eu corrijo sem custo.</li>
+                </ul>
+              </section>
+
+              <section class="tos-item" id="tos-prazo" aria-labelledby="h-prazo">
+                <h3 id="h-prazo"><svg class="px px-heart" aria-hidden="true"><use href="#px-heart"/></svg>Prazo e entrega</h3>
+                <ul>
+                  <li>O prazo é informado antes de eu começar a comissão.</li>
+                  <li>A entrega é digital, em arquivo PNG ou JPG.</li>
+                  <li>Se houver atraso, eu aviso você assim que souber e combinamos o novo prazo.</li>
+                </ul>
+              </section>
+
+              <section class="tos-item" id="tos-direitos" aria-labelledby="h-direitos">
+                <h3 id="h-direitos"><svg class="px px-heart" aria-hidden="true"><use href="#px-heart"/></svg>Direitos autorais e uso da arte</h3>
+                <ul>
+                  <li>Os direitos autorais da ilustração continuam sendo meus. O preço padrão inclui uso pessoal, sem fins lucrativos.</li>
+                  <li>Ao publicar a arte, credite a artista: Hellena (@etforsure no TikTok).</li>
+                  <li>Não diga nem dê a entender que você criou a ilustração.</li>
+                  <li>Uso comercial deve ser negociado separadamente, antes de a arte ser usada.</li>
+                  <li>Revenda: não é permitido vender a arte nem usá-la em itens à venda sem um acordo comigo.</li>
+                  <li>Alterações: não edite a arte para parecer obra sua nem remova assinatura ou crédito, se houver. Ajustes simples, como recortar ou redimensionar para foto de perfil, estão liberados.</li>
+                  <li>NFTs: não é permitido transformar a arte em NFT ou em outro ativo digital.</li>
+                  <li>Inteligência artificial: não é permitido usar a arte, inteira ou em partes, para treinar, ajustar ou alimentar modelos de inteligência artificial.</li>
+                </ul>
+              </section>
+
+              <section class="tos-item" id="tos-referencias" aria-labelledby="h-referencias">
+                <h3 id="h-referencias"><svg class="px px-heart" aria-hidden="true"><use href="#px-heart"/></svg>Referências e limites artísticos</h3>
+                <ul>
+                  <li>Envie uma descrição escrita do personagem (aparência, roupa, expressão e pose) e imagens de referência. Quanto mais detalhes, melhor. Use os canais da seção <a href="#contato">Contato</a>.</li>
+                  <li>Eu posso recusar qualquer pedido com o qual não me sinta confortável.</li>
+                  <li>Desenhos que eu aceito: <span class="ph">preencher: o que você aceita desenhar</span></li>
+                  <li>Desenhos que eu não aceito: <span class="ph">preencher: o que você não aceita desenhar</span></li>
+                </ul>
+              </section>
+
+              <!-- REVISAR: padrão sugerido de portfólio; mude se preferir pedir autorização em todos os casos. -->
+              <section class="tos-item" id="tos-portfolio" aria-labelledby="h-portfolio">
+                <h3 id="h-portfolio"><svg class="px px-heart" aria-hidden="true"><use href="#px-heart"/></svg>Portfólio e privacidade</h3>
+                <ul>
+                  <li>Eu posso mostrar a ilustração no meu portfólio e nas minhas redes, a menos que você peça privacidade.</li>
+                  <li>Se preferir que a arte não seja publicada, avise antes de eu começar o trabalho.</li>
+                </ul>
+              </section>
+
+              <section class="tos-accept" id="tos-aceite" aria-labelledby="h-aceite">
+                <h3 id="h-aceite">Aceitação dos termos</h3>
+                <p>Ao solicitar uma comissão, você confirma que leu e entendeu estes termos.</p>
+                <p>Estas regras não afastam direitos previstos na legislação aplicável.</p>
+              </section>
+
+              <p class="post-foot">tags: #termos #regras</p>
+            </article>
+
+            <article class="post" id="sobre" aria-labelledby="t-sobre">
+              <h2 id="t-sobre">sobre mim <svg class="px px-heart" aria-hidden="true"><use href="#px-heart"/></svg></h2>
+              <p class="sub">▶ quem desenha por aqui</p>
+              <!-- Edite o texto abaixo para contar mais sobre você e seu estilo artístico. -->
+              <p>Oi! Eu sou a Hellena, artista por trás do Cantinho do Desenho. Este é meu espaço para compartilhar meu trabalho, apresentar minhas comissões e receber pedidos de ilustrações.</p>
+              <p class="post-foot">tags: #sobre</p>
+            </article>
+
+            <article class="post" id="contato" aria-labelledby="t-contato">
+              <h2 id="t-contato">contato <svg class="px px-heart" aria-hidden="true"><use href="#px-heart"/></svg></h2>
+              <p class="sub">▶ fale comigo</p>
+              <p>Escolha o canal que preferir. Antes de chamar, leia os <a href="#termos">Termos de Serviço</a>.</p>
+              <div class="contacts">
+                <div class="contact">
+                  <h3>Discord</h3>
+                  <code>presasdecoelho</code>
+                  <p class="actions">
+                    <button type="button" class="btn" data-copy="presasdecoelho">Copiar usuário</button>
+                    <a class="btn btn-pink" href="#contato" data-link-for="discord" hidden>Abrir Discord</a>
+                  </p>
+                </div>
+                <div class="contact">
+                  <h3>TikTok</h3>
+                  <code>@etforsure</code>
+                  <p class="actions">
+                    <button type="button" class="btn" data-copy="@etforsure">Copiar @</button>
+                    <a class="btn btn-pink" href="#contato" data-link-for="tiktok" hidden>Abrir TikTok</a>
+                  </p>
+                </div>
+              </div>
+              <p class="copy-status" id="copy-status" role="status"></p>
+              <p class="post-foot">tags: #contato</p>
+            </article>
+          </main>
+
+          <!-- extras -->
+          <aside aria-label="Atualizações e extras">
+            <div class="box">
+              <h2 class="box-h">Atualizações</h2>
+              <div class="box-b">
+                <ul class="updates">
+                  <li><time datetime="2026-10-28">28/10/2026</time><p>Site no ar, com tabela de preços e termos de serviço.</p></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="box">
+              <h2 class="box-h">Preços-base</h2>
+              <div class="box-b">
+                <dl class="mini-prices">
+                  <div><dt>Fullbody</dt><dd>R$ 55</dd></div>
+                  <div><dt>Halfbody</dt><dd>R$ 45</dd></div>
+                  <div><dt>Icon</dt><dd>R$ 25</dd></div>
+                </dl>
+                <p class="small"><a href="#precos">Ver detalhes</a></p>
+              </div>
+            </div>
+
+            <div class="wood">
+              <p>Antes de pedir:</p>
+              <p><a href="#termos">leia os Termos de Serviço</a></p>
+            </div>
+          </aside>
+        </div>
+
+        <p class="foot"><svg class="px px-heart" aria-hidden="true" style="width:14px;height:12px"><use href="#px-heart"/></svg> © 2026 Hellena · Cantinho do Desenho · feito à mão com HTML e CSS</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
